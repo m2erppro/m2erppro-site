@@ -691,6 +691,179 @@
     margin-bottom: 24px;
   }
   
+  /* ─── DEMO FORM ─── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  
+  .contact-card.form-card {
+    max-width: none;
+    padding: 36px;
+    text-align: left;
+  }
+  
+  .contact-card.email-card {
+    max-width: none;
+    padding: 36px;
+  }
+  
+  .form-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  
+  .form-subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+  }
+  
+  .form-field-half {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+  
+  .form-label .required {
+    color: #dc2626;
+    margin-left: 2px;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text);
+    background: #fff;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    width: 100%;
+  }
+  
+  .form-input:focus,
+  .form-select:focus,
+  .form-textarea:focus {
+    border-color: var(--blue-light);
+    box-shadow: 0 0 0 3px rgba(55, 138, 221, 0.15);
+  }
+  
+  .form-textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+  }
+  
+  .form-submit {
+    width: 100%;
+    padding: 13px 20px;
+    margin-top: 8px;
+    font-size: 15px;
+  }
+  
+  .form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  .form-message {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: none;
+  }
+  
+  .form-message.success {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    display: block;
+  }
+  
+  .form-message.error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    display: block;
+  }
+  
+  .email-card-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .email-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  
+  .email-card-text {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  .email-card-link {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  
+  .email-card-link:hover {
+    color: var(--blue-light);
+  }
+  
+  /* Mobil */
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .contact-card.form-card,
+    .contact-card.email-card {
+      padding: 24px;
+    }
+  }
+  
   /* ─── FOOTER ─── */
   footer {
     padding: 40px 0;
@@ -903,15 +1076,88 @@
   <div class="contact-deco-shape-1"></div>
   <div class="contact-deco-shape-2"></div>
   <div class="container">
-    <div class="section-label">İLETİŞİM</div>
-    <h2 class="section-title">Demo ve fiyatlandırma için bize ulaşın</h2>
-    <p class="section-subtitle">Şirketinizin büyüklüğü ve ihtiyacına uygun çözümü birlikte planlayalım.</p>
+    <div class="section-label">DEMO TALEBİ</div>
+    <h2 class="section-title">Şirketinize özel demo planlayalım</h2>
+    <p class="section-subtitle">Aşağıdaki formu doldurun, en kısa sürede size özel demo erişimini sağlayalım.</p>
     
-    <div class="contact-card">
-      <div style="font-size: 48px; margin-bottom: 8px;">📧</div>
-      <a href="mailto:info@m2erppro.com?subject=m²ErpPro Demo Talebi" class="contact-email">info@m2erppro.com</a>
-      <p class="contact-note">Talebinizi e-posta ile iletin, en kısa sürede dönüş yapalım.</p>
-      <a href="mailto:info@m2erppro.com?subject=m²ErpPro Demo Talebi" class="btn-cta btn-cta-large">E-posta Gönder</a>
+    <div class="contact-grid">
+      <!-- Form -->
+      <div class="contact-card form-card">
+        <div class="form-title">Demo Talep Formu</div>
+        <div class="form-subtitle">Bilgilerinizi alalım, kullanıcı hesabınızı sizin için hazırlayalım.</div>
+        
+        <form id="demoForm" autocomplete="on">
+          <div class="form-field">
+            <label class="form-label" for="company_name">Firma Adı <span class="required">*</span></label>
+            <input class="form-input" id="company_name" name="company_name" type="text" required maxlength="200" placeholder="Örn. Yıldız İnşaat A.Ş.">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-field-half">
+              <label class="form-label" for="vkn">VKN</label>
+              <input class="form-input" id="vkn" name="vkn" type="text" maxlength="11" inputmode="numeric" placeholder="10 haneli">
+            </div>
+            <div class="form-field-half">
+              <label class="form-label" for="city">Şehir</label>
+              <input class="form-input" id="city" name="city" type="text" maxlength="50" placeholder="Örn. Ankara">
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <label class="form-label" for="admin_name">Yetkili Adı Soyadı <span class="required">*</span></label>
+            <input class="form-input" id="admin_name" name="admin_name" type="text" required maxlength="100" placeholder="Ad Soyad">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-field-half">
+              <label class="form-label" for="admin_email">E-posta <span class="required">*</span></label>
+              <input class="form-input" id="admin_email" name="admin_email" type="email" required maxlength="150" placeholder="ornek@firma.com">
+            </div>
+            <div class="form-field-half">
+              <label class="form-label" for="phone">Telefon <span class="required">*</span></label>
+              <input class="form-input" id="phone" name="phone" type="tel" required maxlength="20" placeholder="0 5XX XXX XX XX">
+            </div>
+          </div>
+          
+          <div class="form-field">
+            <label class="form-label" for="employees">Çalışan Sayısı</label>
+            <select class="form-select" id="employees" name="employees">
+              <option value="">Seçiniz</option>
+              <option value="1-5">1 - 5 kişi</option>
+              <option value="5-10">5 - 10 kişi</option>
+              <option value="10-20">10 - 20 kişi</option>
+              <option value="20-50">20 - 50 kişi</option>
+              <option value="50+">50+ kişi</option>
+            </select>
+          </div>
+          
+          <button class="btn-cta form-submit" id="demoSubmit" type="submit">Başvuruyu Gönder</button>
+          
+          <div class="form-message" id="formMessage"></div>
+          
+          <div style="font-size: 11px; color: var(--muted); margin-top: 14px; line-height: 1.5;">
+            Bilgileriniz yalnızca demo erişiminin kurulumu için kullanılır. Üçüncü taraflarla paylaşılmaz.
+          </div>
+        </form>
+      </div>
+      
+      <!-- E-posta yan kart -->
+      <div class="contact-card email-card">
+        <div class="email-card-icon">📧</div>
+        <div class="email-card-title">Doğrudan İletişim</div>
+        <div class="email-card-text">
+          Form yerine e-posta ile yazmayı tercih ederseniz aşağıdaki adresten ulaşabilirsiniz.
+        </div>
+        <a href="mailto:info@m2erppro.com?subject=m²ErpPro Demo Talebi" class="email-card-link">info@m2erppro.com</a>
+        
+        <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); line-height: 1.6;">
+          <strong style="color: var(--text); display: block; margin-bottom: 8px;">Sürecin işleyişi</strong>
+          1. Başvurunuz tarafımıza ulaşır<br>
+          2. 1 iş günü içinde size dönüş yapılır<br>
+          3. Demo hesabınız hazırlanır<br>
+          4. E-posta ile giriş bilgileri paylaşılır
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -945,6 +1191,85 @@
         });
       }
     });
+  });
+</script>
+
+<!-- ─── DEMO FORM — SUPABASE ENTEGRASYONU ─── -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  // Supabase yapılandırması
+  // Bu değerler public — tarayıcıya geliyor. RLS sadece pending_signups INSERT'e
+  // anonim izin verir, başka tablolara erişim yoktur.
+  const SUPABASE_URL = "https://ytawewmbayrytqlnsaiq.supabase.co";
+  const SUPABASE_ANON_KEY = "sb_publishable_afycOMdOW-h-g6ouKqZmJA_ipQVadhL";
+  
+  const supa = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  
+  const form = document.getElementById("demoForm");
+  const submitBtn = document.getElementById("demoSubmit");
+  const messageBox = document.getElementById("formMessage");
+  
+  function showMessage(type, text) {
+    messageBox.className = "form-message " + type;
+    messageBox.textContent = text;
+  }
+  
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    messageBox.className = "form-message";
+    messageBox.textContent = "";
+    
+    // Form verisini topla
+    const data = {
+      company_name: form.company_name.value.trim(),
+      vkn: form.vkn.value.trim() || null,
+      admin_name: form.admin_name.value.trim(),
+      admin_email: form.admin_email.value.trim().toLowerCase(),
+      phone: form.phone.value.trim(),
+      city: form.city.value.trim() || null,
+      employees: form.employees.value || null,
+      source: "web",
+      status: "pending"
+    };
+    
+    // Validasyon
+    if (!data.company_name || !data.admin_name || !data.admin_email || !data.phone) {
+      showMessage("error", "Lütfen zorunlu alanları doldurun.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.admin_email)) {
+      showMessage("error", "Geçerli bir e-posta adresi girin.");
+      return;
+    }
+    
+    // Submit
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Gönderiliyor...";
+    
+    try {
+      const { error } = await supa.from("pending_signups").insert(data);
+      
+      if (error) {
+        console.error("Supabase error:", error);
+        showMessage("error", "Başvuru gönderilemedi. Lütfen birkaç dakika sonra tekrar deneyin veya info@m2erppro.com adresinden iletişime geçin.");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Başvuruyu Gönder";
+        return;
+      }
+      
+      // Başarılı
+      showMessage("success", "✓ Başvurunuz alındı! En kısa sürede dönüş yapılacaktır. Teşekkür ederiz.");
+      form.reset();
+      submitBtn.textContent = "Başvuruyu Gönder";
+      // Buton 5 saniye disabled kalsın, art arda submit önlenir
+      setTimeout(() => { submitBtn.disabled = false; }, 5000);
+      
+    } catch (err) {
+      console.error("Network error:", err);
+      showMessage("error", "İnternet bağlantınızı kontrol edip tekrar deneyin.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Başvuruyu Gönder";
+    }
   });
 </script>
 
